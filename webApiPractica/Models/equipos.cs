@@ -16,5 +16,6 @@ namespace webApiPractica.Models
 		public int? vida_util {  get; set; }
 		public int? estado_equipo_id {  get; set; }
 		public string estado {  get; set; }
+
 	}
 }
