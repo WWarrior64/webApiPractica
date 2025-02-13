@@ -40,7 +40,7 @@ namespace webApiPractica.Controllers
 											   estado_equipo = es.descripcion,
 											   detalle = $"Tipo: { t.descripcion }, Marca { m.nombre_marca } Estado Equipo { es.descripcion }",
 											   e.estado
-										   }).Take(1).ToList();
+										   }).Skip(10).Take(10).ToList();
 
 			if (listadoEquipo.Count == 0) 
 			{
