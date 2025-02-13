@@ -40,7 +40,9 @@ namespace webApiPractica.Controllers
 											   estado_equipo = es.descripcion,
 											   detalle = $"Tipo: { t.descripcion }, Marca { m.nombre_marca } Estado Equipo { es.descripcion }",
 											   e.estado
-										   }).Skip(10).Take(10).ToList();
+										   }).OrderBy(resultado => resultado.estado_equipo_id)
+										   .ThenBy(resultado => resultado.marca_id)
+										   .ThenByDescending(resultado => resultado.tipo_equipo_id).ToList();
 
 			if (listadoEquipo.Count == 0) 
 			{
